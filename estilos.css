@@ -7,15 +7,17 @@
 }
 
 body {
-    background: url(./tiempo.jpg) #000;
+    background-color: black;
     background-size: cover;
     color: #fff;
     font-size: 16px;
 }
 
 .wrap {
-    width: 90%;
-    max-width: 1000px;
+    display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  margin-top: 15%;
 }
 .widget {
     width: 40%;
