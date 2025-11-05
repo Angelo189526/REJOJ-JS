@@ -1,60 +1,109 @@
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    background-size: cover;
-    color: #fff;
-    font-size: 16px;
+  background-color: black;
+  background-size: cover;
+  color: #fff;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrap {
-    display: flex;
-  justify-content: center; /* Centra horizontalmente */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-top: 15%;
+  width: 100%;
+  padding: 2rem;
 }
+
 .widget {
-    width: 40%;
-    margin: 2em;
+  width: 50%;
+  max-width: 500px;
+  min-width: 250px;
 }
 
 .widget p {
-    display: inline-block;
-    line-height: 1em;
+  display: inline-block;
+  line-height: 1em;
 }
 
-.fecha{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 0.3125rem;
-    background: rgba(0,0,0,.5);
-    padding: 20px;
-    width: 100%;
+.fecha {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .reloj {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
-    width: 100%;
-    padding: 20px;
-    font-size: 4em;
-    text-align: center;
-    background: rgba(0,0,0,.5);
-
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width: 100%;
+  padding: 1rem;
+  font-size: 4em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 .reloj .caja-segundos {
-    display: inline-block;
+  display: inline-block;
 }
 
 .reloj .segundos,
 .reloj .ampm {
-    font-size: 2rem;
-    display: block;
+  font-size: 2rem;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .widget {
+    width: 80%;
+  }
+
+  .fecha {
+    font-size: 1.2em;
+    padding: 0.8rem;
+  }
+
+  .reloj {
+    font-size: 3em;
+    padding: 0.8rem;
+  }
+
+  .reloj .segundos,
+  .reloj .ampm {
+    font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .widget {
+    width: 100%;
+  }
+
+  .fecha {
+    font-size: 1em;
+    padding: 0.6rem;
+  }
+
+  .reloj {
+    font-size: 2em;
+    padding: 0.6rem;
+  }
+
+  .reloj .segundos,
+  .reloj .ampm {
+    font-size: 1.2rem;
+  }
 }
